@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0,  maximum-scale=1.0, user-scalable=0">
+    <title>Coveo Angular</title>
+    <base href="/">
+
+    <!--BOOTSTRAP CSS-->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+        crossorigin="anonymous">
+
+    <!--Browserify bundle-->
+    <script src="/dist/bundle.js"></script>
+
+    <!--Angular app-->
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="/css/app.css"/>
+
+    <!--Components-->
+    <script src="/components/portal-header/portal-header.component.js"></script>
+    <script src="/components/partial-home/partial-home.component.js"></script>
+    <script src="/components/searchbox/searchbox.component.js"></script>
+    <script src="/components/search-results/search-results.component.js"></script>
+
+    <!--COVEO-->
+    <script src="/dist/vendor/coveo-search-ui/js/CoveoJsSearch.js"></script>
+    <script src="/dist/vendor/coveo-search-ui/js/CoveoJsSearch.Dependencies.js"></script>
+    <script src="/dist/vendor/coveo-search-ui/js/templates/templatesNew.js"></script>
+    <link rel="stylesheet" href="/dist/vendor/coveo-search-ui/css/CoveoFullSearchNewDesign.css"/>
+
+
+</head>
+
+<body ng-app="HTPortal">
+    <portal-header></portal-header>
+
+    <div class="container">
+
+        <!--THIS IS WHERE YOU INJECT CONTENT-->
+        <div ng-view></div>
+    </div>
+
+</body>
+
+</html>
