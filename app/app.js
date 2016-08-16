@@ -22,27 +22,14 @@ app.config(['$locationProvider', '$routeProvider',
 
             .otherwise('/');
 
-        $locationProvider.html5Mode(true);
+        // $locationProvider.html5Mode(true);
     }
 ]);
 
 app.run(['$rootScope', '$location', function run($rootScope, $location) {
-
-    // $rootScope.searchPage = false;
-
-    // $rootScope.$on('$routeChangeSuccess', function (e, args) {
-
-    //     console.log('Angular route change sucess');
-    //     $rootScope.searchPage = (args.originalPath && args.originalPath === "/search");
-    // });
-
-    // $rootScope.$on('$viewContentLoaded', function(e, args) {
-    //     console.log('Angular $viewContentLoaded event');
-    // })
+    // CODE EXECUTED ON APP RUN
 }]);
 
-// app.controller('MainController', ['$scope', '$rootScope', '$route', function ($scope, $rootScope, $route) {
-//     $rootScope.$on('$routeChangeSuccess', function () {
-//         deubgger;
-//     });
-// }]);
+app.controller('MainController', ['$scope', '$rootScope', '$route', function ($scope, $rootScope, $route) {
+    // MAIN CONTROLLER
+}]);
