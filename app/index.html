@@ -21,31 +21,35 @@
 
     <!--Angular app-->
     <script src="app.js"></script>
-    <link rel="stylesheet" href="/css/app.css"/>
+    <link rel="stylesheet" href="/css/app.css" />
 
     <!--Components-->
-    <script src="/components/portal-header/portal-header.component.js"></script>
+    <!--<script src="/components/portal-header/portal-header.component.js"></script>
     <script src="/components/partial-home/partial-home.component.js"></script>
     <script src="/components/searchbox/searchbox.component.js"></script>
-    <script src="/components/search-results/search-results.component.js"></script>
+    <script src="/components/search-results/search-results.component.js"></script>-->
+    <script src="/directives/header/header.directive.js"></script>
+    <script src="/directives/searchResults/searchResults.directive.js"></script>
+    <script src="/views/home/home.controller.js"></script>
+    <script src="/views/search/search.controller.js"></script>
 
     <!--COVEO-->
     <script src="/dist/vendor/coveo-search-ui/js/CoveoJsSearch.js"></script>
     <script src="/dist/vendor/coveo-search-ui/js/CoveoJsSearch.Dependencies.js"></script>
     <script src="/dist/vendor/coveo-search-ui/js/templates/templatesNew.js"></script>
-    <link rel="stylesheet" href="/dist/vendor/coveo-search-ui/css/CoveoFullSearchNewDesign.css"/>
+    <link rel="stylesheet" href="/dist/vendor/coveo-search-ui/css/CoveoFullSearchNewDesign.css" />
 
 
 </head>
 
 <body ng-app="HTPortal">
-    <portal-header></portal-header>
+    <!--<portal-header></portal-header>-->
 
-    <div class="container">
+    <!--<div class="container">-->
 
-        <!--THIS IS WHERE CONTENT IS INJECTED-->
-        <div ng-view></div>
-    </div>
+    <!--THIS IS WHERE CONTENT IS INJECTED-->
+    <div ui-view></div>
+    <!--</div>-->
 
 </body>
 

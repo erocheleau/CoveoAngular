@@ -2,9 +2,11 @@
   "dependencies": {
     "angular": "^1.5.8",
     "angular-route": "^1.5.8",
+    "angular-ui-router": "^0.3.1",
     "coveo-search-ui": "^1.667.25",
     "jquery": "^3.1.0",
-    "underscore": "^1.8.3"
+    "underscore": "^1.8.3",
+    "urijs": "^1.18.1"
   },
   "devDependencies": {
     "browserify": "^13.1.0",
