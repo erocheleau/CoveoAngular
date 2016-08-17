@@ -17,7 +17,7 @@
 
             searchInterface.addEventListener('afterInitialization', function (e, args) {
                 var decoded = URI.parseQuery(decodeURIComponent($scope.$location.hash()));
-                debugger;
+                
                 var parsedState = {};
                 _.each(decoded, function (value, key) {
                     parsedState[key] = Coveo.HashUtils.getValue(key, '#' + $scope.$location.hash());
