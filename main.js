@@ -1,7 +1,6 @@
 // GLOBALS ===============================
 global._ = require('underscore');
 global.$ = require('jquery');
-global.URI = require('urijs');
 
 // ANGULAR ==================================
 require('angular');
