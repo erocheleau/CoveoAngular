@@ -5,8 +5,6 @@ Implementation of coveo-search-ui with AngularJS
 `npm install`
 
 # Local Debug
-Install local http-server
-`npm install -g http-server`
 
 Start the browserify process + local server
 `npm start`
