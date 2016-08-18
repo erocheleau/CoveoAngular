@@ -16,16 +16,12 @@
             $scope.$location = $location;
 
             searchInterface.addEventListener('afterInitialization', function (e, args) {
-                var decoded = URI.parseQuery(decodeURIComponent($scope.$location.hash()));
-                
-                var parsedState = {};
-                _.each(decoded, function (value, key) {
-                    parsedState[key] = Coveo.HashUtils.getValue(key, '#' + $scope.$location.hash());
-                })
+
+                var parsedState = parseState($scope.$location.hash())
 
                 Coveo.state(searchInterface, parsedState);
                 Coveo.executeQuery(searchInterface);
-            })
+            });
 
             Coveo.init(searchInterface, { externalComponents: [document.getElementById('header-search-box')] });
         }
@@ -35,7 +31,14 @@
         }
 
         function parseState(state) {
+            var decoded = URI.parseQuery(decodeURIComponent(state));
 
+            var parsedState = {};
+            _.each(decoded, function (value, key) {
+                parsedState[key] = Coveo.HashUtils.getValue(key, '#' + state);
+            })
+
+            return parsedState;
         }
 
         return {
